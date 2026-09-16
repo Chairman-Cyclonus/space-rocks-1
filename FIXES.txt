@@ -1,0 +1,12 @@
+Open project.godot in Godot 4.7 and press F6 on main.tscn or F5 to play.
+Controls: A/D rotate, W thrust, hold Space to shoot.
+
+Fixed main scene selection, missing rock and bullet scene assignments,
+rock position/size initialization, collision shapes, spawn path and signal
+connection, rock splitting, duplicate explosion handling, bullet cleanup,
+collision filtering, screen resizing, background sizing and player placement.
+
+Verified using Godot 4.7.2 headless: startup, shooting, cooldown, rock
+collision shapes, splitting, duplicate-hit protection and explosion cleanup.
+The environment reported a Windows certificate-store error; gameplay checks passed.
+No original files were deleted. All source files and assets are included.

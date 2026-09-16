@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://j7vl3ebutmob"]
+
+[ext_resource type="Script" uid="uid://fp14owgn6poc" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://orpg2bx0f7t2" path="res://space_rocks_assets/assets/player_ship.png" id="2_g1dw6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 36.496574
+
+[node name="Player" type="RigidBody2D" unique_id=1632941768]
+script = ExtResource("1_rkbax")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=699866691]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_g1dw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360590584]
+shape = SubResource("CircleShape2D_onrkg")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=2127753690]
+position = Vector2(36, 0)
+
+[node name="GunCooldown" type="Timer" parent="." unique_id=573771771]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
